@@ -1,0 +1,249 @@
+<div class="mat-elevation-z8" style="margin-top: 20px; box-shadow: none;" >
+
+ 
+
+ 
+
+ 
+
+    <table mat-table [dataSource]="dataSource" class="mat-table" *ngIf="table2">
+  
+   
+  
+   
+  
+   
+  
+   
+  
+   
+  
+   
+  
+   
+  
+      <ng-container matColumnDef="Actions">
+  
+   
+  
+   
+  
+   
+  
+        <th mat-header-cell *matHeaderCellDef> Actions </th>
+  
+   
+  
+   
+  
+   
+  
+        <td mat-cell *matCellDef="let element">
+  
+   
+  
+          <span class="circle"
+  
+   
+  
+            style=" border-radius: 50%; height: 150px; width: 150px; ">
+  
+   
+  
+            <button style="border: none; border-radius: 50%; ">
+  
+   
+  
+              <img src="../../assets/images/drop.png" style="width: 15px; height: 15px; opacity: .4;" alt=""></button>
+  
+   
+  
+          </span>
+  
+   
+  
+          <button (click)="toggletable2()" >
+  
+   
+  
+            <img src="../../assets/images/pencil (2).png" alt="">
+  
+   
+  
+          </button> <button (click)="deletetable2()" ><img src="../../assets/images/bin.png" alt=""></button> <button (click)="secondclick()"><img
+  
+   
+  
+              src="../../assets/images/plus.png" alt=""></button> {{ element.Actions }}
+  
+   
+  
+        </td>
+  
+   
+  
+   
+  
+   
+  
+      </ng-container>
+  
+   
+  
+      <ng-container matColumnDef="Code">
+  
+   
+  
+   
+  
+   
+  
+        <th mat-header-cell *matHeaderCellDef style="margin-left: 20%;"> Batch Code </th>
+  
+   
+  
+   
+  
+   
+  
+        <td mat-cell *matCellDef="let element" style="margin-left: 20%;" > <input type="text"  *ngIf="var1" name="" id="" style="width: 120px;"
+  
+   
+  
+            placeholder="enter code" [(ngModel)]="code">
+  
+   
+  
+          <p *ngIf="var4">{{code}}</p>  {{element.Code}}
+  
+   
+  
+        </td>
+  
+   
+  
+   
+  
+   
+  
+      </ng-container>
+  
+   
+  
+   
+  
+   
+  
+      <ng-container matColumnDef="ProgramName">
+  
+   
+  
+   
+  
+   
+  
+        <th mat-header-cell *matHeaderCellDef style="margin-left: 30%;"> ProgramName </th>
+  
+   
+  
+   
+  
+   
+  
+        <td mat-cell *matCellDef="let element" style="margin-left: 30%;"> <input type="text" *ngIf="var2" name="course" id="" style="width: 120px;"
+  
+   
+  
+            placeholder="enter course name" [(ngModel)]="ProgramName">
+  
+   
+  
+          <p *ngIf="var5">{{ProgramName}}</p> {{element.ProgramName}}
+  
+   
+  
+        </td>
+  
+   
+  
+   
+  
+   
+  
+      </ng-container>
+  
+   
+  
+   
+  
+   
+  
+      <ng-container matColumnDef="Student">
+  
+   
+  
+   
+  
+   
+  
+        <th mat-header-cell *matHeaderCellDef style="margin-left: 40%;" > Student </th>
+  
+   
+  
+   
+  
+   
+  
+        <td mat-cell *matCellDef="let element"style="margin-left: 40%;"> <input type="text" *ngIf="var3" name="Teacher" id="" style="width: 120px;"
+  
+   
+  
+            placeholder="enter course name" [(ngModel)]="Student">
+  
+   
+  
+          <p *ngIf="var6">{{Student}}</p>  {{element.Student}}
+  
+   
+  
+        </td>
+  
+   
+  
+   
+  
+   
+  
+      </ng-container>
+  
+   
+  
+   
+  
+   
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  
+   
+  
+   
+  
+   
+  
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  
+   
+  
+   
+  
+   
+  
+    </table>
+  
+     <div style="margin-left: 100px;">
+  
+    <ng-container #container5></ng-container>
+  
+     </div>
+  
+  </div>
